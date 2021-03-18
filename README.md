@@ -1,6 +1,7 @@
-# Learning Redux 
+# Learning Redux
 
 - Basic Redux
+
 ```javascript
 import { createStore } from 'redux';
 
@@ -36,3 +37,6 @@ store.subscribe(() => console.log(store.getState()));
 store.dispatch(increment());
 store.dispatch(decrement());
 ```
+
+- React Redux
+  ![React Redux](./Redux.gif)
