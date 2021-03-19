@@ -1,16 +1,18 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 import { addTodo } from 'actions';
 
-const AddTodo = (props) => {
+const AddTodo = () => {
+  const dispatch = useDispatch();
+
   return (
     <div>
       <form
         onSubmit={(e) => {
           e.preventDefault();
           let todo = e.target.userTodo.value;
-          props.dispatch(addTodo(todo));
+          dispatch(addTodo(todo));
           e.target.userTodo.value = "";
         }}
       >
@@ -21,4 +23,4 @@ const AddTodo = (props) => {
   );
 };
 
-export default connect()(AddTodo);
+export default AddTodo;

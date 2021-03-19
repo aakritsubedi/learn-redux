@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
+import Todo from 'views/Todo';
+
 import { increment, decrement, login, logout } from 'actions';
-import AddTodo from 'views/Todo/AddTodo';
 
 const App = () => {
   const [factor, setFactor] = useState(1);
@@ -31,7 +32,7 @@ const App = () => {
       <button onClick={() => dispatch(decrement(factor))}>-</button>
       <br /> <hr />
       <h2>Todo App</h2>
-      <AddTodo />
+      <Todo />
     </div>
   );
 };
