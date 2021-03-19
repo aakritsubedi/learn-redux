@@ -1,21 +1,21 @@
 export const increment = (nr) => {
   return {
     type: 'INCREMENT',
-    payload: nr
+    payload: nr,
   };
 };
 
 export const decrement = (nr) => {
   return {
     type: 'DECREMENT',
-    payload: nr
+    payload: nr,
   };
 };
 
 export const login = (username) => {
   return {
     type: 'SIGN_IN',
-    payload: username
+    payload: username,
   };
 };
 
@@ -24,3 +24,15 @@ export const logout = () => {
     type: 'SIGN_OUT',
   };
 };
+
+// Todos
+export const addTodo = (todo) => ({
+  type: 'ADD_TODO',
+  payload: todo,
+  id: Math.floor((Math.random() * 100) + 1)
+});
+
+export const removeTodo = (id) => ({
+  type: 'REMOVE_TODO',
+  payload: id,
+});
