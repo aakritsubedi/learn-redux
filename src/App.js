@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { increment, decrement, login, logout } from 'actions';
+import AddTodo from 'views/Todo/AddTodo';
 
 const App = () => {
   const [factor, setFactor] = useState(1);
@@ -25,9 +26,12 @@ const App = () => {
       <p>
         The value of <strong>counter</strong> is {counter}.
       </p>
-      Factor: <input type="number" value={factor} onChange={(e) =>setFactor(e.target.value)} />
+      Factor: <input type="number" value={factor} onChange={(e) => setFactor(e.target.value)} />
       <button onClick={() => dispatch(increment(factor))}>+</button>
       <button onClick={() => dispatch(decrement(factor))}>-</button>
+      <br /> <hr />
+      <h2>Todo App</h2>
+      <AddTodo />
     </div>
   );
 };
