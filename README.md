@@ -41,6 +41,9 @@ store.dispatch(decrement());
 - React Redux
   ![React Redux](./Redux.gif)
 
+- Todo App
+  ![Todo App](./Todo.gif)
+
 ---
 
 ### Demo Link
