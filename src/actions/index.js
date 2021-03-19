@@ -34,5 +34,5 @@ export const addTodo = (todo) => ({
 
 export const removeTodo = (id) => ({
   type: 'REMOVE_TODO',
-  payload: id,
+  id: id,
 });

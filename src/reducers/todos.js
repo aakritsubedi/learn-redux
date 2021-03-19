@@ -17,7 +17,11 @@ const todosReducer = (state = initialState, action) => {
         ]
       }
     case 'REMOVE_TODO':
-      return {}
+      const todos = state.data.filter(todo => todo.id !== id);
+      return {
+        ...state,
+        data: todos
+      }
     default: 
       return state;
   }
